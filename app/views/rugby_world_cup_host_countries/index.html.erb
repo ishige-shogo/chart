@@ -1,7 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Rugby World Cup Host Countries</h1>
-<%= column_chart RugbyWorldCupHostCountry.pluck(:held_at, :total_attendance) %>
+
+<%=link_to "area_chart", rugby_world_cup_host_countries_path(key: 1) %>
+<%=link_to "line_chart", rugby_world_cup_host_countries_path(key: 2) %>
+
+<% if @type== "1" %>        
+  <%= area_chart RugbyWorldCupHostCountry.pluck(:held_at, :total_attendance),
+                 id: 'total-attendance-chart',
+                 width: '400px',
+                 height: '500px',
+                 colors: ['#a00'] %>
+<% else %> 
+  <%= line_chart RugbyWorldCupHostCountry.pluck(:held_at, :matches),
+                 id: 'total-attendance-chart',
+                 width: '400px',
+                 height: '500px',
+                 colors: ['#000'] %>
+<% end %>
+                 
 
 <table>
   <thead>
@@ -31,6 +48,24 @@
   </tbody>
 </table>
 
+
+
 <br>
 
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %><br>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
+<%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>
 <%= link_to 'New Rugby World Cup Host Country', new_rugby_world_cup_host_country_path %>

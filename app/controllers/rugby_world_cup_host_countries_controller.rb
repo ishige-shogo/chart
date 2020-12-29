@@ -5,6 +5,7 @@ class RugbyWorldCupHostCountriesController < ApplicationController
   # GET /rugby_world_cup_host_countries.json
   def index
     @rugby_world_cup_host_countries = RugbyWorldCupHostCountry.all
+    @type = params[:key]
   end
 
   # GET /rugby_world_cup_host_countries/1
