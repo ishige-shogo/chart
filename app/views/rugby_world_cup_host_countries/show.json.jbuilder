@@ -1,0 +1,1 @@
+json.partial! "rugby_world_cup_host_countries/rugby_world_cup_host_country", rugby_world_cup_host_country: @rugby_world_cup_host_country

@@ -1,0 +1,2 @@
+class RugbyWorldCupHostCountry < ApplicationRecord
+end

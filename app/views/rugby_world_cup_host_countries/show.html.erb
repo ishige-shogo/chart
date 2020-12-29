@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rugby_world_cup_host_country.name %>
+</p>
+
+<p>
+  <strong>Total attendance:</strong>
+  <%= @rugby_world_cup_host_country.total_attendance %>
+</p>
+
+<p>
+  <strong>Matches:</strong>
+  <%= @rugby_world_cup_host_country.matches %>
+</p>
+
+<p>
+  <strong>Stadium capacity:</strong>
+  <%= @rugby_world_cup_host_country.stadium_capacity %>
+</p>
+
+<p>
+  <strong>Held at:</strong>
+  <%= @rugby_world_cup_host_country.held_at %>
+</p>
+
+<%= link_to 'Edit', edit_rugby_world_cup_host_country_path(@rugby_world_cup_host_country) %> |
+<%= link_to 'Back', rugby_world_cup_host_countries_path %>
